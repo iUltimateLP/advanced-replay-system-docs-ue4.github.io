@@ -8,5 +8,5 @@
 * Super-simple setup
 * Fully working example supplied
 
-[Get Started](#headline)
+[Get Started](#Introduction)
 [Unreal Marketplace]()

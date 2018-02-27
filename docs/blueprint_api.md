@@ -102,6 +102,11 @@ These Blueprint nodes can be used to interact with the replay, which means start
 > ![GetAllReplayEvents Node](_media/GetAllReplayEvents.png)   
 > Returns all replay events of a given replay. An example use case would be to iterate through the output array, and draw ticks on a timeline respectfully to the events.
 
+### Get All Replay Events Of Group
+> ![GetAllReplayEventsOfGroup Node](_media/GetAllEventsOfGroup.png)   
+> Returns all replay events of a given replay which are in a specified group. It takes one input:
+ - **Group Name**: The group of which you want to get the replay events.
+
 ### Get Event Data
 > ![GetEventData Node](_media/GetEventData.png)   
 > This returns the data stored with a replay event.   
@@ -113,7 +118,7 @@ These Blueprint nodes can be used to interact with the replay, which means start
 
 ---
 
-## Member Variables
+## Member Variables (Replay)
 
 | Variable Name | Type     | Description |
 | ------------- | -------- | ----------- |
@@ -123,3 +128,12 @@ These Blueprint nodes can be used to interact with the replay, which means start
 | File Size     | Integer  | Total file size of the replay in kilobytes |
 | Date Recorded | TimeDate | Timestamp of the point in time when this replay was recorded |
 | Is Recording  | Boolean  | Indictates if the replay is currently recording |
+
+## Member Variables (Replay Event)
+
+| Variable Name | Type     | Description |
+| ------------- | -------- | ----------- |
+| Owning Replay | [Replay](#member-variables-replay) | The replay this event is associated with |
+| Time In Ms    | Integer  | The point in time where this event is placed on the replay's timeline |
+| ID            | String   | The ID of this replay (group name + the index) |
+| Group Name    | String   | The group this replay event is associated with |
